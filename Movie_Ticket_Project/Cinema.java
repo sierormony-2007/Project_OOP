@@ -13,6 +13,7 @@ public class Cinema {
     Ticket[] tickets;
     Customer[] customers;
     BuyTicket[] buyTickets;
+    Staff[] staffs;
     private String name;
     int menuCount=0;
 
