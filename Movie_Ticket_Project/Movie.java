@@ -3,6 +3,7 @@ public class Movie{
     private String title;
     private double duration;
     private String releaseDate;
+    private String genre;
     
 
     public Movie(int id, String title, double duration, String releaseDate){
@@ -14,6 +15,7 @@ public class Movie{
 
     public int getId() {
         return id;
+        
     }
 
    
