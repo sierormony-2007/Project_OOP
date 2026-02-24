@@ -29,8 +29,6 @@ public class Staff {
         return name;
     }
 
-    
-
     public double getSalary() {
         return salary;
     }
@@ -42,7 +40,5 @@ public class Staff {
     public String getPosition() {
         return position;
     }
-
-    
 
 }
