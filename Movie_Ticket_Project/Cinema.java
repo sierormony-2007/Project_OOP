@@ -1,15 +1,6 @@
 
 import java.util.ArrayList;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author USER
- */
 public class Cinema {
     private Movie[] movies;
     private Showtime[] showtimes;
@@ -21,6 +12,10 @@ public class Cinema {
     public static final String CREATE_MOVIE = "CREATE_MOVIE";
     public static final String SELL_TICKET = "SELL_TICKET";
     public static final String VIEW_MOVIES = "VIEW_MOVIES";
+    public static final String UPDATE_MOVIE = "UPDATE_MOVIE";
+    public static final String DELETE_MOVIE = "DELETE_MOVIE";
+    public static final String VIEW_TICKETS = "VIEW_TICKETS";
+    public static final String CHECK_TICKET = "CHECK_TICKET";
 
     private ArrayList<IStaff> staffs = new ArrayList<>();
     private IStaff loggedIStaff;
@@ -33,6 +28,8 @@ public class Cinema {
         tickets = new Ticket[maxMovies];
 
         staffs.add(new Manager("M001", "manager1", "pass123"));
+        staffs.add(new CashierStaff("C001", "cashier1", "pass456"));
+        staffs.add(new OperatorStaff("CT001", "checkticket1", "pass789"));
     }
 
 
@@ -72,6 +69,7 @@ public class Cinema {
         menuCount++;
 
         System.out.println("Movie added successfully.");
+    }
 
     public void printMovies() {
 
@@ -112,5 +110,4 @@ public class Cinema {
     }
 
     }
-}
 

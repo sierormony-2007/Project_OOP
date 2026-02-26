@@ -1,19 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
-/**
- *
- * @author USER
- */
-public class Cashier implements IStaff {
+public class CashierStaff implements IStaff {
 
     private String id;
     private String username;
     private String password;
 
-    public Cashier(String id, String username, String password) {
+    public CashierStaff(String id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -28,8 +20,7 @@ public class Cashier implements IStaff {
 
         if (action == null) return false;
 
-        return action.equals(Cinema.CREATE_MOVIE)
-                || action.equals(Cinema.SELL_TICKET)
+        return action.equals(Cinema.SELL_TICKET)
                 || action.equals(Cinema.VIEW_MOVIES);
     }
 }
